@@ -40,8 +40,20 @@ puts "This tickt is for: #{ticket.event}, at #{ticket.venue}, on #{ticket.date}.
 "The seat is #{ticket.seat}, " +
 "and it costs $#{"%.2f." % ticket.price}"
 
+=begin
 if ticket.available?
   puts "You're in luck!"
 else
   puts "Sorry--that seat has been sold."
 end
+=end
+
+print "Information desired: "
+request = gets.chomp
+
+if ticket.respond_to?(request)
+  puts ticket.send(request)
+else
+  puts "No such information available"
+end
+
