@@ -18,6 +18,9 @@ end
 def ticket.price
   5.50
 end
+def ticket.available?
+  false
+end
 
 =begin
 print "This ticket is for: "
@@ -36,3 +39,9 @@ puts "This tickt is for: #{ticket.event}, at #{ticket.venue}, on #{ticket.date}.
 "The performer is #{ticket.performer}.\n" +
 "The seat is #{ticket.seat}, " +
 "and it costs $#{"%.2f." % ticket.price}"
+
+if ticket.available?
+  puts "You're in luck!"
+else
+  puts "Sorry--that seat has been sold."
+end
