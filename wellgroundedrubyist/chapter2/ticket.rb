@@ -19,6 +19,7 @@ def ticket.price
   5.50
 end
 
+=begin
 print "This ticket is for: "
 print ticket.event + ", at "
 print ticket.venue + ", on "
@@ -29,3 +30,9 @@ print "The seat is "
 print ticket.seat + ", "
 print "and it costs $"
 puts "%.2f." % ticket.price
+=end
+
+puts "This tickt is for: #{ticket.event}, at #{ticket.venue}, on #{ticket.date}.\n" +
+"The performer is #{ticket.performer}.\n" +
+"The seat is #{ticket.seat}, " +
+"and it costs $#{"%.2f." % ticket.price}"
