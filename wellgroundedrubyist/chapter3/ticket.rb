@@ -34,7 +34,10 @@ end
 
 ticket = Ticket.new("Town Hall", "2013-11-12")
 ticket.price=(63.00)
+# syntactic sugar in Ruby allows for abpve line to be:
+# ticket.price = 63.00
 puts "The ticket costs $#{"%.2f" % ticket.price}."
 ticket.price=(72.50)
+# ticket.price = 72.50
 puts "Whoops -- it just went up. It now costs $#{"%.2f" % ticket.price}."
 
